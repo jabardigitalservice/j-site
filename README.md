@@ -25,7 +25,7 @@ Here is a list of all the core technologies this project use:
 &nbsp;
 ### Folder Structure
 ```bash
-portal-jabar-frontend/
+j-site/
 ├── assets        # Uncompiled assets such as Stylus or Sass files, images, or fonts
 ├── components    # Vue.js components
 ├── layouts       # Custom layout accessible with the layout property in the page component
