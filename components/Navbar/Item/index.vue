@@ -41,7 +41,7 @@ export default {
   props: {
     menu: {
       type: Object,
-      default: () => {}
+      default: () => ({})
     },
     showChildren: {
       type: Boolean,
