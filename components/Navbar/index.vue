@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-navbar flex justify-between fixed top-0 left-0 right-0 backdrop-blur-md px-[50px] py-[13px]">
+  <nav class="theme-navbar flex justify-between fixed top-0 left-0 right-0 backdrop-blur-md px-[50px] py-[13px] z-10">
     <a href="/" class="hover:cursor-pointer">
       <img
         src="@/assets/logo.svg"
@@ -20,7 +20,7 @@
         />
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script>
