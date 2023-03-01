@@ -2,7 +2,7 @@
   <div class="min-w-0 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-6 text-white">
     <!-- Location -->
     <div class="flex items-start gap-3">
-      <Icon src="/icons/location.svg" alt="Lokasi" size="18px" class="py-1" />
+      <img src="@/assets/icons/location.svg" aria-hidden="true" size="18px" class="py-1" />
       <div class="flex flex-col gap-1">
         <p class="font-roboto font-bold leading-7">
           Gedung Sate Bandung
@@ -15,7 +15,7 @@
     </div>
     <!-- Mail -->
     <div class="flex items-start gap-3">
-      <Icon src="/icons/email.svg" alt="Email" size="18px" class="py-1" />
+      <img src="@/assets/icons/email.svg" aria-hidden="true" size="18px" class="py-1" />
       <div class="flex flex-col gap-1">
         <p class="font-roboto font-bold leading-7">
           Surel
@@ -25,40 +25,42 @@
     </div>
     <!-- Feedback -->
     <div class="flex items-start gap-3">
-      <Icon src="/icons/feedback.svg" alt="Umpan Balik" size="20px" class="py-1" />
+      <img src="@/assets/icons/feedback.svg" aria-hidden="true" size="20px" class="py-1" />
       <div class="flex flex-col gap-1">
         <p class="font-bold">
           Umpan Balik
         </p>
-        <button
-          type="button"
+        <p
           class="text-sm text-left leading-6"
-          @click="clickFeedbackForm"
         >
-          Isi survei performa situs web
-        </button>
-        <Feedback :show="isFeedbackFormOpen" />
+          Survey Performa Web
+        </p>
+        <!-- @todo: Feedback component -->
+        <!-- <Feedback :show="isFeedbackFormOpen" /> -->
       </div>
     </div>
     <!-- Social Media -->
     <div class="flex items-start gap-3">
-      <Icon src="/icons/network.svg" alt="Lokasi" size="20px" class="py-1" />
+      <img src="@/assets/icons/network.svg" aria-hidden="true" size="20px" class="py-1" />
       <div class="flex w-full flex-col gap-2">
         <p class="font-bold">
           Media Sosial
         </p>
         <div class="w-full flex justify-between md:justify-start gap-6">
           <a
-            v-for="socialMediaSite in socialMediaSites"
-            :key="socialMediaSite.id"
-            :href="socialMediaSite.link"
+            v-for="site in socialMediaSites"
+            :key="site.id"
+            :href="site.link"
             target="_blank"
-            :aria-label="socialMediaSite.name"
+            :aria-label="site.name"
             rel="noreferrer"
             class="p-2 flex justify-center items-center rounded border border-white border-opacity-20"
-            @click="gtagFooterSocialMedia(socialMediaSite.name)"
           >
-            <Icon :name="socialMediaSite.icon" size="18px" />
+            <img
+              :src="require(`@/assets/icons/${site.icon}.svg`)"
+              :alt="`logo ${site.icon}`"
+              size="18px"
+            />
           </a>
         </div>
       </div>
@@ -72,6 +74,7 @@ export default {
   data () {
     return {
       isFeedbackFormOpen: false,
+      // @todo: change this dummy socialMediaSites
       socialMediaSites : [
         {
           id: 1,
@@ -101,7 +104,10 @@ export default {
     }
   },
   computed: {
-    ...mapState('settings', ['navigationMenus'])
+    ...mapState('settings', [
+        'navigationMenus'
+      ]
+    )
   }
 }
 </script>
