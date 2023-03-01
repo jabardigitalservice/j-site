@@ -15,7 +15,7 @@
       <FooterInfo />
       <FooterSitemap />
     </BaseContainer>
-    <!-- <FooterCopyright /> -->
+    <FooterCopyright />
   </footer>
 </template>
 
