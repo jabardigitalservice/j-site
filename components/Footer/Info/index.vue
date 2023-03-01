@@ -2,7 +2,7 @@
   <div class="min-w-0 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-6 text-white">
     <!-- Location -->
     <div class="flex items-start gap-3">
-      <img src="@/assets/icons/location.svg" aria-hidden="true" size="18px" class="py-1" />
+      <img src="@/assets/icons/location.svg" aria-hidden="true" width="18px" height="18px" class="py-1" />
       <div class="flex flex-col gap-1">
         <p class="font-roboto font-bold leading-7">
           Gedung Sate Bandung
@@ -15,7 +15,7 @@
     </div>
     <!-- Mail -->
     <div class="flex items-start gap-3">
-      <img src="@/assets/icons/email.svg" aria-hidden="true" size="18px" class="py-1" />
+      <img src="@/assets/icons/email.svg" aria-hidden="true" width="18px" height="18px" class="py-1" />
       <div class="flex flex-col gap-1">
         <p class="font-roboto font-bold leading-7">
           Surel
@@ -25,7 +25,7 @@
     </div>
     <!-- Feedback -->
     <div class="flex items-start gap-3">
-      <img src="@/assets/icons/feedback.svg" aria-hidden="true" size="20px" class="py-1" />
+      <img src="@/assets/icons/feedback.svg" aria-hidden="true" width="20px" height="20px" class="py-1" />
       <div class="flex flex-col gap-1">
         <p class="font-bold">
           Umpan Balik
@@ -41,7 +41,7 @@
     </div>
     <!-- Social Media -->
     <div class="flex items-start gap-3">
-      <img src="@/assets/icons/network.svg" aria-hidden="true" size="20px" class="py-1" />
+      <img src="@/assets/icons/network.svg" aria-hidden="true" width="20px" height="20px" class="py-1" />
       <div class="flex w-full flex-col gap-2">
         <p class="font-bold">
           Media Sosial
@@ -59,7 +59,7 @@
             <img
               :src="require(`@/assets/icons/${site.icon}.svg`)"
               :alt="`logo ${site.icon}`"
-              size="18px"
+              width="18px" height="18px"
             />
           </a>
         </div>

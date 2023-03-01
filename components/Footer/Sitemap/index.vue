@@ -1,7 +1,7 @@
 <template>
   <div class="footer__sitemap flex w-full flex-col text-white">
     <div class="flex items-start gap-3">
-      <img src="@/assets/icons/sitemap.svg" alt="Lokasi" size="18px" class="py-1" />
+      <img src="@/assets/icons/sitemap.svg" alt="Lokasi" width="18px" height="18px" class="py-1" />
       <div class="flex w-full min-h-0 flex-col gap-4">
         <h2 class="font-roboto font-bold leading-7">
           Sitemap
@@ -19,7 +19,7 @@
                 {{ navigation.page }}
               </h3>
               <div class="footer__sitemap__button h-6 w-6 flex items-center justify-center rounded-full hover:bg-green-600">
-                <img src="@/assets/icons/chevron-down.svg" size="16px" fill="white" class="cursor-pointer transition-transform ease-in duration-150" />
+                <img src="@/assets/icons/chevron-down.svg" width="16px" height="16px" fill="white" class="cursor-pointer transition-transform ease-in duration-150" />
               </div>
             </summary>
             <ul class="grid grid-cols-1 md:grid-cols-2 mt-2 gap-2">
