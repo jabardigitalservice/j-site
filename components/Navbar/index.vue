@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-navbar flex justify-between fixed top-0 left-0 right-0 backdrop-blur-md px-[50px] py-[13px]">
+  <nav class="theme-navbar flex justify-between fixed top-0 left-0 right-0 backdrop-blur-md px-[50px] py-[13px] z-10">
     <a href="/" class="hover:cursor-pointer">
       <img
         src="@/assets/logo.svg"
@@ -20,7 +20,7 @@
         />
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -33,7 +33,9 @@ export default {
   },
   async fetch() {
     // @todo: change API URL source to the real one
-    this.listMenu = await this.$axios.$get('https://63e4a965c04baebbcda92684.mockapi.io/menus')
+    const res = await this.$axios.$get('https://63e4a965c04baebbcda92684.mockapi.io/menus')
+    this.listMenu = res
+    this.$store.dispatch('settings/setNavigationMenu', res)
   },
   fetchOnServer: true,
   methods: {
