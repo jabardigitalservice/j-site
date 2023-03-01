@@ -33,7 +33,9 @@ export default {
   },
   async fetch() {
     // @todo: change API URL source to the real one
-    this.listMenu = await this.$axios.$get('https://63e4a965c04baebbcda92684.mockapi.io/menus')
+    const res = await this.$axios.$get('https://63e4a965c04baebbcda92684.mockapi.io/menus')
+    this.listMenu = res
+    this.$store.dispatch('settings/setNavigationMenu', res)
   },
   fetchOnServer: true,
   methods: {
